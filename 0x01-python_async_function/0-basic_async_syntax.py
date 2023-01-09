@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-'''Task 0's module.
-'''
+"""
+Basic syntac for async await functions
+"""
+
 import asyncio
-import random
+from random import uniform
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    '''Waits for a random number of seconds.
-    '''
-    wait_time = random.random() * max_delay
-    await asyncio.sleep(wait_time)
-    return wait_time
+    """Function to wait for a random delay"""
+
+    delay_time = uniform(0, max_delay)
+    await asyncio.sleep(delay_time)
+    return delay_time
